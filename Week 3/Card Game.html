@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <script>
+
+      var gamesPlayed = 0;
+      var Money = 0;
+
+      while (gamesPlayed < 5) {
+
+        if (gamesPlayed>0){
+          var deal = prompt("Dealer: We shall play again. Round " + gamesPlayed + ".");
+        }
+
+          var dealDecimal = Math.random() * 8 + 1 
+          var deal = Math.floor(dealDecimal)
+          console.log(deal);
+
+          alert("Dealer: Card Time!");
+          alert("*Dealer pulls out the cards and shows them to you*");
+          var guess = prompt("Dealer: How many cards do you think are in this deck? Pick a number, 1 through 8.");
+
+          if (deal == guess) {
+            alert("Correct! You now have $" + Money + " + $55!");
+            Money = Money + 55;
+          } else {
+            alert("Nope! The answer was " + deal + ".");
+          }
+
+        gamesPlayed = gamesPlayed + 1;
+      }
+
+      alert("Money: $" + Money);
+    </script>
+  </body>
+</html>

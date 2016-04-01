@@ -7,11 +7,10 @@
 			alert("deCRYPTION");
 			var choice = prompt("unknown: You are being hacked. Answer my questions and you will be safe. Do you wish to continue, Yes or No?");
 			//Incorrect choice 1
-			if (choice == "No") 
+			else
 			{
 				alert("[deCRYPTION] unknown: You have been hacked... Your personal info has leaked to the public(FAIL).");
 			}
-
 			//Correct choice 1
 			if (choice == "Yes")
 			{
@@ -26,16 +25,16 @@
 					if (choice3 == "Yes"){
 						alert("unknown: good... you have past all the test, now we shall send you your info for the next steps.");
 					}
-
-					//Correct choice 3
-					if (choice3 == "No"){
+					
+					//Incorrect choice 3
+					else{
 						alert("[deCRYPTION](banned from server)");
 
 					}
 
 				}
 				//Incorrect choice 2
-				if (choice2 == "No"){
+				else{
 					alert("[deCRYPTION] unknown: You have too much info about this society... You are being recorded(FAIL)");
 
 				}

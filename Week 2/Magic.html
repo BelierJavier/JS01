@@ -1,0 +1,29 @@
+<html>
+
+	<body>
+	    <u><b><i>DON'T MESS WITH ME!</i></b></u>
+		<script>
+
+
+			function checkPassword(){
+
+				var password = prompt("What is the password?");
+
+				//This is correct
+				if(password == "xyzzy") {
+					alert("Correct!");
+				}
+				//This is wrong
+				else{
+					alert("Sorry, that password is incorrect.");
+					checkPassword();
+				}
+			}
+
+			checkPassword();
+
+		</script>
+
+	</body>
+
+</html>
