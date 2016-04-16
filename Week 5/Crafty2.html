@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Crafty Intro</title>
+		<script src=" https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+	</head>
+		<style>
+		  html{
+		  	background-color: black
+		  }
+
+		</style>
+	<body>
+	<img src ="https://c528e55c-a-62cb3a1a-s-sites.googlegroups.com/site/csclubalpha/image-1/New%20Piskel.png?attachauth=ANoY7cp8DM8OxLDtXQC_ItZ_pdLz79e6L_Ath2FhKlyK0xzWVTFjfq7lLF4REewzb2nvPX5NeOwS614tYVN_5nLbvpHr3SLX6fmCbGhuefanb_rUJko_KOU9DkLIiZQLS1MP01eLJoHH8dAMpRwAfRcsHQuXZ_JJQT3PRDHBmmocf1prrRKLbaiQOcdd2630H5XL25iK100zyj89zoikP81IGttn7--_21h6HF0QpBOCA26KOKf9w7Q%3D&amp;attredirects=0">
+		<script>
+			function start(){
+				Crafty.init();
+
+				var coin = Crafty.e("2D, DOM, Image").image("coin.png");
+				coin.attr({x:500, y:500, w:10, h: 10 });
+				coin.image("coin.png")
+
+				
+				var player = Crafty.e("Player, 2D, DOM, Color, Twoway, Gravity, Solid, Collision");
+				var attributes = {
+					x: 0,
+					y: 50,
+					w: 50,
+					h: 50,
+				}
+				player.attr(attributes);
+				player.color("blue");
+				player.twoway();
+				player.gravity("Platform");
+
+
+
+
+				var platform = Crafty.e("Platform, 2D, DOM, Color,");
+				platform.attr({x:200, y:100, w:60, h:600});
+
+				var secondPlatform = Crafty.e("Platform, 2D, DOM, Color,");
+				secondPlatform.attr({x:0, y:100, w:60, h:600});
+
+				var thirdPlatform = Crafty.e("Platform, 2D, DOM, Color,");
+				thirdPlatform.attr({x:400, y:100, w:60, h:600});
+
+				var wall = Crafty.e("Wall,Platform, 2D, DOM, Color, Gravity, Collision");
+				wall.attr({x:600, y:100, w:60, h:600});
+
+
+				var wallTwo = Crafty.e("Wall,Platform, 2D, DOM, Color, Gravity, Collision");
+				wallTwo.attr({x:900, y:100, w:150, h:20});
+
+				wallTwo.color("grey")
+
+				thirdPlatform.color("grey")
+
+				platform.color("grey")
+
+				secondPlatform.color("grey")
+
+				wall.color("grey")
+
+				var goal = Crafty.e("2D, DOM, Color, Solid, Collision");
+				goal.attr({x:950, y:50, w:25, h:25});
+
+				goal.color("green")
+				goal.onHit("Player", reachedGoal);
+
+	
+
+			}
+ 			
+ 			function reachedGoal() {
+ 				alert("You Win!")
+ 			}
+
+			window.onload = start;
+		</script>
+	</body>
+</html>
