@@ -1,0 +1,60 @@
+<html>
+
+	<body>
+
+			<script>
+				
+				function checkOpt(){
+					// Choice 1 description
+					var choice1 = prompt ("You have been trapped in The Dungeon of Darkness. You are in a cell laying on your worn out cot. What do you do?")
+
+					//Choice 1 Correct Instructions
+					if (choice1 == "get up"){
+						alert("You are now standing up looking around.");
+					}
+					//Choice 1 Wrong Instructions
+					else{
+						alert("You need to get on your feet first before you do anything.");
+						    checkOpt();
+	                		
+					}
+
+					  //choice 2 description
+					  var choice2 = prompt ("You see that your cell gate is open but you observe your room and also see a bobby pin. What is your next move?");
+
+					  //choice 2 correct Instructions
+					  if (choice2 == "pick up bobby pin"){
+					  	alert("You have taken the bobby pin, now you walk out the cell door...");
+					  }
+					  if (choice2 == "take bobby pin"){
+					  	alert("You have taken the bobby pin, now you walk out the cell door...");
+					  }
+					  if (choice2 == "leave cell"){
+					  	alert("You now walk out the cell door...As you leave the cell, you enter a dark corridor with mossy brick walls. Down the hall you see a door, but it is locked. You can pick lock the door if you have a bobby pin. You do not have the bobby pin and a guard heard your footsteps and set the alarm...");
+					  	checkOpt();
+					  }
+
+	
+
+					   //choice 3 description
+					   var choice3 = prompt ("As you leave the cell, you enter a dark corridor with mossy brick walls. Down the hall you see a door, but it is locked. You can pick lock the door if you have a bobby pin.")
+
+					  //choice 3 correct instructions
+					  if (choice3== "pick lock door"){
+					  	alert("You unlocked the door and escaped The Dungeon of Darkness!");
+					  }
+
+					  else{
+					  	alert("If you attempted to unlock the door, try 'pick lock door'...")
+					  	    checkOpt();
+					  }
+
+			    }		
+				
+					checkOpt();
+
+			</script>
+
+	</body>
+
+</html>
